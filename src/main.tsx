@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import { ApolloProvider } from '@apollo/client'
@@ -8,10 +8,10 @@ import { client } from './api'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
-		<BrowserRouter>
+		<HashRouter>
 			<ApolloProvider client={client}>
 				<App />
 			</ApolloProvider>
-		</BrowserRouter>
+		</HashRouter>
 	</React.StrictMode>
 )
